@@ -2,6 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "My first Hexlet project",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +12,9 @@
     "brain",
     "games"
   ],
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "author": "Andrey Gerasimuk",
   "license": "ISC"
 }
