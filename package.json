@@ -9,12 +9,16 @@
   },
   "keywords": [
     "hexlet",
-    "brain",
-    "games"
+    "brain-games",
+    "game"
   ],
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
   "author": "Andrey Gerasimuk",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {}
 }
