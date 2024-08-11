@@ -12,8 +12,8 @@ console.log('Find the greatest common divisor of given numbers.');
 let answersCount = 0;
 
 while (answersCount < 3) {
-  const numberA = getRandomNumber(20);
-  const numberB = getRandomNumber(20);
+  const numberA = getRandomNumber(100);
+  const numberB = getRandomNumber(100);
   const divisorsA = divisors(numberA);
   const divisorsB = divisors(numberB);
   const commonNumbers = [];
