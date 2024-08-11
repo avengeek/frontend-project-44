@@ -8,3 +8,5 @@ Step 6 complete - demo Brain-calc <a href="https://asciinema.org/a/inIEyitgESi0z
 Step 7 complete - demo Brain-gcd <a href="https://asciinema.org/a/LPEwDDTNTzk4owgu6a9EU5nms">asciinema</a>
 
 Step 8 complete - demo Brain-progression <a href="https://asciinema.org/a/sobInITmuVOKhFanA3Z2VgUF3">asciinema</a>
+
+Step 9 complete - demo Brain-prime <a href="https://asciinema.org/a/vlgWeMvFPVkV0W5gpbAQLKtMO">asciinema</a>
