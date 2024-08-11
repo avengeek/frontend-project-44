@@ -27,17 +27,18 @@ while (answersCount < 3) {
 
   const rightAnswer = commonNumbers[commonNumbers.length - 1];
 
-  answersCount += 1;
-
-  console.log(`${answersCount} question: ${numberA}  ${numberB}`);
+  console.log(`Question: ${numberA}  ${numberB}`);
 
   const playerAnswer = readlineSync.question('Your answer: ');
 
   if (rightAnswer === +playerAnswer) {
     console.log('Correct!');
+    answersCount += 1;
+    if (answersCount === 3) {
+      console.log(`Congratulations, ${playerName}`);
+    }
   } else {
     console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
     break;
   }
-  console.log(`Congratulations, ${playerName}`);
 }
