@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import hello from '../src/cli.js';
-import { getRandomNumber } from '../src/index.js';
+import { getRandomNumber, isPrime } from '../src/index.js';
 
 console.log('Welcome to the Brain Games!');
 
 const playerName = hello();
 
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
 let answersCount = 0;
 
 while (answersCount < 3) {
-  const randomNumber = getRandomNumber();
-  const rightAnswer = (randomNumber % 2) ? 'no' : 'yes';
+  const number = getRandomNumber();
+  const rightAnswer = (isPrime(number)) ? 'yes' : 'no';
 
-  console.log(`Question: ${randomNumber}`);
+  console.log(`Question: ${number}`);
 
   const playerAnswer = readlineSync.question('Your answer: ');
 
