@@ -27,7 +27,7 @@ while (answersCount < 3) {
 
   const rightAnswer = commonNumbers[commonNumbers.length - 1];
 
-  console.log(`Question: ${numberA}  ${numberB}`);
+  console.log(`Question: ${numberA} ${numberB}`);
 
   const playerAnswer = readlineSync.question('Your answer: ');
 
