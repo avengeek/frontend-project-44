@@ -40,7 +40,7 @@ while (answersCount < 3) {
       console.log(`Congratulations, ${playerName}!`);
     }
   } else {
-    console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
+    console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}' \nLet's try again, ${playerName}!`);
     break;
   }
 }
