@@ -1,26 +1,24 @@
-const getRandomNumber = (max = 100) => {
-  const randomNumber = Math.floor(Math.random() * max) + 1;
-  return randomNumber;
-};
+import readlineSync from 'readline-sync';
+import welcomeToGame from './cli.js';
 
-const isPrime = (number) => {
-  if (number < 2) return false;
-  for (let i = 2; i < number; i += 1) {
-    if (number % i === 0) {
-      return false;
+export default function runEngine(rules, generateRound) {
+  const roundsCount = 3;
+  const name = welcomeToGame();
+  console.log(rules);
+
+  for (let i = 0; i < roundsCount; i += 1) {
+    const [question, correctAnswer] = generateRound();
+    console.log(`Question: ${question}`);
+
+    const userAnswer = readlineSync.question('Your answer: ');
+
+    if (userAnswer === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+      return;
     }
   }
-  return true;
-};
 
-const divisors = (number) => {
-  const col = [];
-  for (let j = 1; j <= (number); j += 1) {
-    if (number % j === 0) {
-      col.push(j);
-    }
-  }
-  return col;
-};
-
-export { getRandomNumber, divisors, isPrime };
+  console.log(`Congratulations, ${name}!`);
+}
